@@ -1,14 +1,13 @@
 .aboutUsSection {
     display: flex;
-    max-width: 1200px;
+    /*max-width: 1600px;*/
     text-align: center;
-    margin: auto;
+    margin: auto auto 110px;
 }
 
 .aboutUsArticle {
     display: flex;
-    justify-content: center;
     text-align: center;
     width: 821px;
-    margin: auto auto 102px;
+    margin: 115px auto;
 }

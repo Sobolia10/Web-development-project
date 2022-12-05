@@ -4,13 +4,13 @@
     align-items: center;
     margin: auto;
     width: 237px;
- }
+}
 
 .about-blocks h3 {
     font-weight: 600;
 }
 
 .about-blocks img {
-    max-width: 62px;
+    /*max-width: 62px;*/
     margin-bottom: 30px;
 }

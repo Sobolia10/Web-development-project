@@ -1,0 +1,47 @@
+.modal-user {
+    border: 2px solid black;
+    width: 300px;
+    height: 600px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.ourServices-section {
+    background-color: #E4FDF9;
+    align-content: center;
+}
+
+.ourServices-article {
+    text-align: center;
+    margin: auto auto 30px;
+    width: 822px;
+}
+
+.modal-banner {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    width: 45%;
+}
+
+.bannerBlock-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px 45px;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+.button-all {
+    font-size: 22px;
+    background: #FFFFFF;
+    width: 220px;
+    height: 70px;
+}
+
+.button-all:hover {
+    background: #00897B;
+}

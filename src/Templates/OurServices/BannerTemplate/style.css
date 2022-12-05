@@ -1,0 +1,13 @@
+.bannerBlock {
+    width: 370px;
+    height: 439px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    align-items: center;
+    padding: 21px;
+}
+
+.bannerBlock:hover {
+    background: #00897B;
+}

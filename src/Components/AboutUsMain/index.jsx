@@ -1,6 +1,6 @@
 import './styles.css';
 
-const AboutUsMainComponent = (props) => {
+const AboutUsMain = (props) => {
     const {
         title,
         description,
@@ -15,4 +15,4 @@ const AboutUsMainComponent = (props) => {
 
 }
 
-export default AboutUsMainComponent;
+export default AboutUsMain;

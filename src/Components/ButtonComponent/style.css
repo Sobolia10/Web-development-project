@@ -1,0 +1,13 @@
+.btnStyle {
+    width: 160px;
+    height: 55px;
+    padding: 17px 14px 16px 14px;
+    border: 2px solid black;
+    cursor: pointer;
+    background: #FFFFFF;
+}
+
+.btnStyle:hover {
+    border: 2px solid #ffffff;
+    background: #00897B;
+}
