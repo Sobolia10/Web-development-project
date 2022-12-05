@@ -6,7 +6,6 @@ import {Spinner} from "react-bootstrap";
 
 const OurServicesTemplate = () => {
     const [isLoading, setLoading] = useState(false);
-    const [isLoaded, setLoaded] = useState(false)
     const [users, setUsers] = useState([]);
     const [show, setShow] = useState(false);
 
@@ -21,6 +20,8 @@ const OurServicesTemplate = () => {
             const data = await response.json();
             if (data) {
                 setUsers(data);
+                setLoading(false);
+                //handleShow();
             }
             setLoading(false)
         } catch (error) {
@@ -43,7 +44,7 @@ const OurServicesTemplate = () => {
             </div>
             <div className={'bannerBlock-box'}>
                 {isLoading && <Spinner/>}
-                {users.length > 0 && !isLoading && users.map((currentElem) => (<BannerTemplate
+                {users.length > 0 && users.map((currentElem) => (<BannerTemplate
                         key={currentElem.id}
                         user={currentElem}
                     />))}
