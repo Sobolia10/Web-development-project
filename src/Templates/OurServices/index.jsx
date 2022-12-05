@@ -2,6 +2,7 @@ import {useState} from "react";
 import BannerTemplate from "./BannerTemplate";
 import './style.css';
 import {Spinner} from "react-bootstrap";
+import TitleComponent from "../../Components/TitleComponent";
 
 
 const OurServicesTemplate = () => {
@@ -36,11 +37,9 @@ const OurServicesTemplate = () => {
     return (
 
         <div className={'ourServices-section'}>
-            <div className={'ourServices-article'}>
-                <h2>Our Services</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam,</p>
+            <div className={'title-desc'}>
+                <TitleComponent title={'Our Services'} description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor \n' +
+                    'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'}/>
             </div>
             <div className={'bannerBlock-box'}>
                 {isLoading && <Spinner/>}

@@ -7,6 +7,7 @@ const UserCard = (props) => {
             <p>{user.address.city}</p>
             <p>{user.email}</p>
             <p>{user.name}</p>
+
         </div>
     )
 }

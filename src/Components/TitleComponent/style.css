@@ -1,0 +1,11 @@
+.title-desc {
+    text-align: center;
+    width: 822px;
+    display: flex;
+    margin: 30px auto;
+    flex-direction: column;
+}
+
+.about-desc h2 {
+    margin-bottom: 30px;
+}

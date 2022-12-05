@@ -10,13 +10,6 @@
 
 .ourServices-section {
     background-color: #E4FDF9;
-    align-content: center;
-}
-
-.ourServices-article {
-    text-align: center;
-    margin: auto auto 30px;
-    width: 822px;
 }
 
 .modal-banner {
@@ -40,6 +33,7 @@
     background: #FFFFFF;
     width: 220px;
     height: 70px;
+    margin-bottom: 103px;
 }
 
 .button-all:hover {

@@ -1,0 +1,13 @@
+.priceCard-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px 45px;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+.pricing-section {
+    background: #F0F1F1;
+    padding: 115px 0;
+}

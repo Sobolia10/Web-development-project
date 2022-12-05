@@ -1,13 +1,13 @@
-import AboutUsMain from "../../Components/AboutUsMain";
 import AboutUsBlock from "../../Components/AboutUsBlock";
 import {DESCRIPTION_DATA} from "./constants";
 import './style.css';
+import TitleComponent from "../../Components/TitleComponent";
 
 const AboutUs = () => {
     return (
         <>
-            <div className={'aboutUsArticle'}>
-                <AboutUsMain
+            <div>
+                <TitleComponent
                     title={'About us'}
                     description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'}
                 />
