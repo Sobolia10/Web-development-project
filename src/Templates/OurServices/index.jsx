@@ -44,10 +44,12 @@ const OurServicesTemplate = () => {
             </div>
             <div className={'bannerBlock-box'}>
                 {isLoading && <Spinner/>}
-                {users.length > 0 && users.map((currentElem) => (<BannerTemplate
-                        key={currentElem.id}
-                        user={currentElem}
-                    />))}
+                {users.length > 0 && !isLoading &&
+                    users.map(user =>
+                        <BannerTemplate
+                            key={user.id}
+                            user={user}
+                        />)}
                 {users.length > 0 && <button className={'button-all'} onClick={clearUsersAsync}>hide all</button>}
                 {!users.length && !isLoading &&
                     <button className={'button-all'} onClick={showUsersAsync}>view all</button>}

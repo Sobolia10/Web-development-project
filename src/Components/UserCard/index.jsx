@@ -4,7 +4,7 @@ const UserCard = (props) => {
         <div>
             <p>{user.id}</p>
             <p>{user.username}</p>
-            <p>{user.address}</p>
+            <p>{user.address.city}</p>
             <p>{user.email}</p>
             <p>{user.name}</p>
         </div>

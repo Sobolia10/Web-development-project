@@ -16,10 +16,9 @@ const BannerTemplate = ({user}) => {
         setShow(false);
     }
 
-
     return (
-        <div key={user.id} className={'bannerBlock'}>
-            <p>{user.address}</p>
+        <div className={'bannerBlock'}>
+            <p>{user.address.city}</p>
             <p>{user.name}</p>
             <p>{user.username}</p>
             <p>{user.email}</p>
