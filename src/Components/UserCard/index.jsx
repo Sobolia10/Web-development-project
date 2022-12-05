@@ -1,15 +1,12 @@
 const UserCard = (props) => {
-    const {id, username, address, email, name, phone, website, company} = props;
+    const {user} = props;
     return (
         <div>
-            <p>{id}</p>
-            <p>{username}</p>
-            <p>{address}</p>
-            <p>{email}</p>
-            <p>{name}</p>
-            <p>{phone}</p>
-            <p>{website}</p>
-            <p>{company}</p>
+            <p>{user.id}</p>
+            <p>{user.username}</p>
+            <p>{user.address}</p>
+            <p>{user.email}</p>
+            <p>{user.name}</p>
         </div>
     )
 }

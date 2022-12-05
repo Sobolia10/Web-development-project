@@ -6,6 +6,7 @@ import {Spinner} from "react-bootstrap";
 
 const OurServicesTemplate = () => {
     const [isLoading, setLoading] = useState(false);
+    const [isLoaded, setLoaded] = useState(false)
     const [users, setUsers] = useState([]);
     const [show, setShow] = useState(false);
 
@@ -20,8 +21,6 @@ const OurServicesTemplate = () => {
             const data = await response.json();
             if (data) {
                 setUsers(data);
-                setLoading(true);
-                //handleShow();
             }
             setLoading(false)
         } catch (error) {
@@ -44,31 +43,10 @@ const OurServicesTemplate = () => {
             </div>
             <div className={'bannerBlock-box'}>
                 {isLoading && <Spinner/>}
-                {/*{!users.length && !isLoading &&
-                    users.map(({id, title, description, img}) => (
-                        <BannerTemplate id={id}
-                                        key={id}
-                                        title={title}
-                                        description={description}
-                                        img={img}/>
-                    ))
-                }*/}
-                {
-                    users.length > 0 &&
-                    users.map(({id, username, address, email, name, phone, website, company}) => (
-                        <BannerTemplate
-                            id={id}
-                            key={id}
-                            username={username}
-                            address={address.city}
-                            email={email}
-                            name={name}
-                            phone={phone}
-                            website={website}
-                            company={company}
-                        />
-                    ))
-                }
+                {users.length > 0 && !isLoading && users.map((currentElem) => (<BannerTemplate
+                        key={currentElem.id}
+                        user={currentElem}
+                    />))}
                 {users.length > 0 && <button className={'button-all'} onClick={clearUsersAsync}>hide all</button>}
                 {!users.length && !isLoading &&
                     <button className={'button-all'} onClick={showUsersAsync}>view all</button>}
@@ -90,8 +68,7 @@ const OurServicesTemplate = () => {
                 </Modal.Body>
             </Modal>*/}
             </div>
-        </div>
-    );
+        </div>);
 }
 
 export default OurServicesTemplate;
