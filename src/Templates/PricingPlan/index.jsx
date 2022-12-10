@@ -15,7 +15,7 @@ const PricingPlanTemplate = () => {
             <div className={'priceCard-box'}>
                 {PRICING_DATA.map(el => (
                     <Card style={{width: '18rem'}} key={el.id}>
-                        <Card.Body>
+                        <Card.Body className={'priceCard-title'}>
                             <Card.Title>{el.title}</Card.Title>
                             <Card.Text>
                                 <span style={{width: '1em'}}>$</span>{el.price}per month
@@ -28,9 +28,9 @@ const PricingPlanTemplate = () => {
                             <ListGroup.Item>24/7 Suports</ListGroup.Item>
                             <ButtonComponent title={'order now'} onClick={()=>(console.log())}/>
                         </ListGroup>
-                        <Card.Body>
+                        {/*<Card.Body>*/}
 
-                        </Card.Body>
+                        {/*</Card.Body>*/}
                     </Card>
                 ))
                 }

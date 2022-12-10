@@ -5,9 +5,11 @@
     border: 2px solid black;
     cursor: pointer;
     background: #FFFFFF;
+    text-transform: capitalize;
 }
 
 .btnStyle:hover {
     border: 2px solid #ffffff;
     background: #00897B;
+    color: #FFFFFF;
 }

@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 45px 45px;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
     margin: auto;
 }
@@ -10,4 +10,15 @@
 .pricing-section {
     background: #F0F1F1;
     padding: 115px 0;
+}
+
+.priceCard-title {
+    background: #3949AB;
+    color: #FFFFFF;
+}
+
+.list-group-flush {
+    background: #FFFFFF;
+    align-items: center;
+    padding: 15px;
 }
