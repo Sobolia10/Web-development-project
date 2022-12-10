@@ -1,13 +1,14 @@
 import {useState} from "react";
 import BannerTemplate from "./BannerTemplate";
-import './style.css';
 import {Spinner} from "react-bootstrap";
 import TitleComponent from "../../Components/TitleComponent";
+import './style.css';
 
 
 const OurServicesTemplate = () => {
     const [isLoading, setLoading] = useState(false);
     const [users, setUsers] = useState([]);
+    const [filteredUsers, setFilteredUsers] = useState([]);
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -21,6 +22,7 @@ const OurServicesTemplate = () => {
             const data = await response.json();
             if (data) {
                 setUsers(data);
+                setFilteredUsers(data);
                 setLoading(false);
                 //handleShow();
             }
@@ -31,26 +33,38 @@ const OurServicesTemplate = () => {
     }
 
     function clearUsersAsync() {
-        setUsers([])
+        setFilteredUsers([])
     }
+
+    const handleChange = (event) => {
+        const newUsers = users.filter(
+            user => user.name.toLowerCase().includes(event.target.value.toLowerCase())
+                || user.username.toLowerCase().includes(event.target.value.toLowerCase())
+        );
+        setFilteredUsers(newUsers)
+    };
+
 
     return (
 
         <div className={'ourServices-section'}>
             <div className={'title-desc'}>
-                <TitleComponent title={'Our Services'} description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor \n' +
-                    'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'}/>
+                <TitleComponent title={'Our Services'}
+                                description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor \n' +
+                                    'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'}/>
             </div>
+            {filteredUsers.length > 0 && <input type="text" onChange={handleChange}/>}
             <div className={'bannerBlock-box'}>
                 {isLoading && <Spinner/>}
-                {users.length > 0 && !isLoading &&
-                    users.map(user =>
+                {filteredUsers.length > 0 && !isLoading &&
+                    filteredUsers.map(user =>
                         <BannerTemplate
                             key={user.id}
                             user={user}
                         />)}
-                {users.length > 0 && <button className={'button-all'} onClick={clearUsersAsync}>hide all</button>}
-                {!users.length && !isLoading &&
+                {filteredUsers.length > 0 &&
+                    <button className={'button-all'} onClick={clearUsersAsync}>hide all</button>}
+                {!filteredUsers.length && !isLoading &&
                     <button className={'button-all'} onClick={showUsersAsync}>view all</button>}
 
                 {/*            <Modal show={show} onHide={handleClose}>
