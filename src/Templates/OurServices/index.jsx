@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useRef, useState} from "react";
 import BannerTemplate from "./BannerTemplate";
 import {Spinner} from "react-bootstrap";
 import TitleComponent from "../../Components/TitleComponent";
@@ -10,6 +10,9 @@ const OurServicesTemplate = () => {
     const [users, setUsers] = useState([]);
     const [filteredUsers, setFilteredUsers] = useState([]);
     const [show, setShow] = useState(false);
+
+
+    const ourServicesSection = useRef(null)
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -47,7 +50,7 @@ const OurServicesTemplate = () => {
 
     return (
 
-        <div className={'ourServices-section'}>
+        <div className={'ourServices-section'} id={'ourServices'} ref={ourServicesSection}>
             <div className={'title-desc'}>
                 <TitleComponent title={'Our Services'}
                                 description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor \n' +
@@ -62,10 +65,10 @@ const OurServicesTemplate = () => {
                             key={user.id}
                             user={user}
                         />)}
-                {filteredUsers.length > 0 &&
-                    <button className={'button-all'} onClick={clearUsersAsync}>hide all</button>}
-                {!filteredUsers.length && !isLoading &&
-                    <button className={'button-all'} onClick={showUsersAsync}>view all</button>}
+                {/*{filteredUsers.length > 0 &&*/}
+                {/*    <button className={'button-all'} onClick={clearUsersAsync}>hide all</button>}*/}
+                {/*{!filteredUsers.length && !isLoading &&*/}
+                {/*    <button className={'button-all'} onClick={showUsersAsync}>view all</button>}*/}
 
                 {/*            <Modal show={show} onHide={handleClose}>
                 <Modal.Body>
@@ -84,6 +87,10 @@ const OurServicesTemplate = () => {
                 </Modal.Body>
             </Modal>*/}
             </div>
+            {filteredUsers.length > 0 &&
+                <button className={'button-all'} onClick={clearUsersAsync}>hide all</button>}
+            {!filteredUsers.length && !isLoading &&
+                <button className={'button-all'} onClick={showUsersAsync}>view all</button>}
         </div>);
 }
 

@@ -5,7 +5,7 @@ import TitleComponent from "../../Components/TitleComponent";
 
 const AboutUs = () => {
     return (
-        <>
+        <div className="aboutUsArticle">
             <div>
                 <TitleComponent
                     title={'About us'}
@@ -25,7 +25,7 @@ const AboutUs = () => {
                     )
                 )}
             </div>
-        </>
+        </div>
     )
 }
 

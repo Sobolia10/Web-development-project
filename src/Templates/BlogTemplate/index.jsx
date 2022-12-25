@@ -11,13 +11,12 @@ const BlogTemplate = () => {
             <TitleComponent title={'Blog'}
                             description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor \n' +
                                 'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'}/>
-            {BLOG_DATA.map(({title, publishDate, img, description}) => (
+            {BLOG_DATA.map(({id ,title, publishDate, img, description}) => (
                 isLeft = !isLeft,
-                    console.log(isLeft),
-                    <BlogComponent title={title} publishDate={publishDate} img={img} description={description}
+                    <BlogComponent title={title} key={id} publishDate={publishDate} img={img} description={description}
                                    isLeft={isLeft}/>
             ))}
-            <ButtonComponent title={'More view'} onClick={()=>(console.log)}/>
+            <ButtonComponent title={'More view'} onClick={() => (console.log)}/>
         </div>
     )
 }

@@ -6,6 +6,6 @@
     flex-direction: column;
 }
 
-.about-desc h2 {
-    margin-bottom: 30px;
+.title-desc h2 {
+    padding-bottom: 30px;
 }

@@ -1,0 +1,23 @@
+.backgroundImg {
+    background-image: url('http://localhost:3000//img//content.png');
+    height: 747px;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 217px;
+}
+
+.backgroundImg h1 {
+    padding-bottom: 61px;
+}
+
+.backgroundImg p {
+    padding-bottom: 127px;
+}
+
+.backgroundImg button {
+    background: transparent;
+    border: 4px solid white;
+    margin-right: 38px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}

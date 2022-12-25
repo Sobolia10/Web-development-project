@@ -3,10 +3,8 @@
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
-    justify-content: space-around;
-    padding: 20px 0;
-    background-color: lightgrey;
-    margin-bottom: 20px;
+    margin: 23px 0;
+    justify-content: center;
 }
 
 .header__nav-bar {
@@ -16,4 +14,14 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+}
+
+.header img {
+    width: 83px;
+    height: 75px;
+}
+
+.header p {
+    width: 117px;
+    margin-right: 366px;
 }

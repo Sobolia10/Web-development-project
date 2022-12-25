@@ -1,37 +1,37 @@
 export const NAV_BAR_DATA = [
     {
         id: 0,
-        label: 'HOME',
+        label: 'home',
         path: '/home',
     },
     {
         id: 1,
-        label: 'ABOUT',
+        label: 'about',
         path: '/about',
     },
     {
         id: 2,
-        label: 'SERVICING',
+        label: 'servicing',
         path: '/servicing',
     },
     {
         id: 3,
-        label: 'PRICING',
+        label: 'pricing',
         path: '/pricing',
     },
     {
         id: 4,
-        label: 'TEAM',
+        label: 'team',
         path: '/team',
     },
     {
         id: 5,
-        label: 'BLOG',
+        label: 'blog',
         path: '/blog',
     },
     {
         id: 6,
-        label: 'CONTACT US',
+        label: 'contact us',
         path: '/contactUs',
     },
 ]

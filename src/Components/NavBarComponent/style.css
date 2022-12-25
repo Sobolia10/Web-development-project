@@ -5,17 +5,20 @@
     -webkit-column-gap: 10px;
     column-gap: 10px;
     margin-bottom: 0;
+    text-decoration: none;
 }
 
 .nav__link {
     list-style-type: none;
 }
 
-.nav a {
+nav a {
     font-weight: 600;
     text-decoration: none;
+    text-transform: capitalize;
+    color: black;
 }
 
-.nav a:hover {
+nav a:hover {
     color: brown;
 }

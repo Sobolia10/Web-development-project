@@ -12,3 +12,7 @@
 .bannerBlock:hover {
     background: #00897B;
 }
+
+.bannerBlock:hover .btnStyle {
+    background: #00897B;
+}

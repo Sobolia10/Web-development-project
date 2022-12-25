@@ -1,7 +1,7 @@
 export const MEMBERS_DATA = [
     {
         id: 0,
-        img: 'img/img1',
+        img: '/img/john.png',
         title: 'John Doe',
         description: 'General Manager',
         email: 'email@email.com',
@@ -9,7 +9,7 @@ export const MEMBERS_DATA = [
 
     {
         id: 1,
-        img: 'img/img1',
+        img: '/img/alexa.png',
         title: 'Alexa Biru',
         description: 'Office Director',
         email: 'email@email.com',
@@ -17,7 +17,7 @@ export const MEMBERS_DATA = [
 
     {
         id: 2,
-        img: 'img/img1',
+        img: '/img/admin.png',
         title: 'Ronobir Sing',
         description: 'Admin',
         email: 'email@email.com',

@@ -22,7 +22,7 @@ const BannerTemplate = ({user}) => {
             <p>{user.name}</p>
             <p>{user.username}</p>
             <p>{user.email}</p>
-            <ButtonComponent title={'Read more'} onClick={() => handleShowUser}/>
+            <ButtonComponent title={'Read more'}  onClick={() => handleShowUser}/>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Body>
                     <UserCard

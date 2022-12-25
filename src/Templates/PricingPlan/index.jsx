@@ -28,9 +28,6 @@ const PricingPlanTemplate = () => {
                             <ListGroup.Item>24/7 Suports</ListGroup.Item>
                             <ButtonComponent title={'order now'} onClick={()=>(console.log())}/>
                         </ListGroup>
-                        {/*<Card.Body>*/}
-
-                        {/*</Card.Body>*/}
                     </Card>
                 ))
                 }

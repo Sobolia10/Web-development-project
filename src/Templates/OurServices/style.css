@@ -25,17 +25,32 @@
     gap: 45px 45px;
     justify-content: center;
     text-align: center;
-    margin: auto;
+    margin: auto auto 30px;
 }
 
 .button-all {
     font-size: 22px;
     background: #FFFFFF;
-    width: 220px;
-    height: 70px;
-    margin-bottom: 103px;
+    width: 300px;
+    height: 55px;
+    margin: auto auto 30px 39%;
+    text-transform: uppercase;
 }
 
 .button-all:hover {
     background: #00897B;
+    color: #FFFFFF;
+    border: none;
+}
+
+.ourServices-section input {
+    margin: 0 39% 5%;
+    align-items: center;
+    width: 300px;
+    height: 55px;
+    padding: 17px 14px 16px 14px;
+    border: 2px solid black;
+    cursor: pointer;
+    background: #FFFFFF;
+    text-transform: uppercase;
 }

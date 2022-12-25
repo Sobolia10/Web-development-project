@@ -1,13 +1,8 @@
 .aboutUsSection {
     display: flex;
-    /*max-width: 1600px;*/
     text-align: center;
-    margin: auto auto 110px;
 }
 
-/*.aboutUsArticle {*/
-/*    display: flex;*/
-/*    text-align: center;*/
-/*    width: 821px;*/
-/*    margin: 115px auto;*/
-/*}*/
+.aboutUsArticle {
+    margin: 115px auto;
+}

@@ -5,7 +5,7 @@
     border: 2px solid black;
     cursor: pointer;
     background: #FFFFFF;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .btnStyle:hover {
@@ -13,3 +13,4 @@
     background: #00897B;
     color: #FFFFFF;
 }
+

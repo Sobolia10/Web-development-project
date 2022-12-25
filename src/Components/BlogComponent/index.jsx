@@ -1,12 +1,15 @@
+import './style.css';
+
 const BlogComponent= (props) => {
-    const {title, publishDate, img, description, isLeft} = props
+    const {title, publishDate, img, description, isLeft} = props;
+
     return (
-        <div>
+        <div className={'blogComponent'}>
             <img className={isLeft ? 'isLeft' : 'isRight'} src={img} alt=""/>
             <h4>{title}</h4>
-            <img src="calendar.svg" alt=""/>
+
             <span>{publishDate}</span>
-            <img src="icon.svg" alt=""/>
+            <img src="/img/calendar.svg" alt="calendar"/>
             <span>Development</span>
             <span>{description}</span>
         </div>

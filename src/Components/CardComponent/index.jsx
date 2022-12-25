@@ -1,9 +1,9 @@
 const CardComponent = (props) => {
-    const {id, name, description, img, email} = props
+    const {id, title, description, img, email} = props
     return (
         <div key={id}>
-            <img src={img} alt={name}/>
-            <h4>{name}</h4>
+            <img src={img} alt={title}/>
+            <h4>{title}</h4>
             <p>{description}</p>
             <p>{email}</p>
         </div>

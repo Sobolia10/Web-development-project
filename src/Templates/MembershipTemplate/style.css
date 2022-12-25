@@ -1,0 +1,12 @@
+.cardMember {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin: 150px auto 150px auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.cardMember img {
+    margin-bottom: 15px;
+}
