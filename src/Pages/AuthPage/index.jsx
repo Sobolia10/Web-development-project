@@ -1,24 +1,28 @@
 import {useNavigate} from "react-router-dom";
 import ButtonComponent from "../../Components/ButtonComponent";
-import { useDispatch } from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {useState} from "react";
 import {authActionCreator} from "../../redux";
 
 const AuthPage = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [incorrectPassword, setIncorrectPassword] = useState(false)
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const reduxPassword = useSelector(state => state.authReducer.password);
+    const reduxUsername = useSelector(state => state.authReducer.username);
+
+
 
     let authAction = () => {
-        if (username === "sobolia" && password === "12345") {
+        if (username === reduxUsername && password === reduxPassword) {
             dispatch(authActionCreator())
             navigate('/');
         } else {
-
+            setIncorrectPassword(true);
         }
     }
-
 
     const handleChange = (event) => {
         switch (event.target.id) {
@@ -39,6 +43,7 @@ const AuthPage = () => {
             <input type={'text'} id={'login'} name={'login'} onChange={handleChange}/>
             <input type={'password'} id={'password'} name={'password'} onChange={handleChange}/>
             <ButtonComponent title={'Login'} onClick={() => authAction}/>
+            {incorrectPassword ? <span>Неправильный пароль</span> : null}
         </div>
     )
 }

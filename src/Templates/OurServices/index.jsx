@@ -5,11 +5,13 @@ import TitleComponent from "../../Components/TitleComponent";
 import './style.css';
 
 
-const OurServicesTemplate = () => {
+const OurServicesTemplate = ({refs}) => {
     const [isLoading, setLoading] = useState(false);
     const [users, setUsers] = useState([]);
     const [filteredUsers, setFilteredUsers] = useState([]);
     const [show, setShow] = useState(false);
+
+
 
 
     const ourServicesSection = useRef(null)
@@ -50,7 +52,7 @@ const OurServicesTemplate = () => {
 
     return (
 
-        <div className={'ourServices-section'} id={'ourServices'} ref={ourServicesSection}>
+        <div className={'ourServices-section'} id={'ourServices'} ref={refs}>
             <div className={'title-desc'}>
                 <TitleComponent title={'Our Services'}
                                 description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor \n' +

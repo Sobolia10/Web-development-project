@@ -8,20 +8,23 @@ import MembershipTemplate from "./Templates/MembershipTemplate";
 import BlogTemplate from "./Templates/BlogTemplate";
 import ContactUsTemplate from "./Templates/ContactUsTemplate";
 import FooterTemplate from "./Templates/FooterTemplate";
+import {useRef} from "react";
 
 function App() {
-  return (
-    <>
-        <MainPageTemplate/>
-        <AboutUs/>
-        <OurServicesTemplate/>
-        <PricingPlanTemplate/>
-        <MembershipTemplate/>
-        <BlogTemplate/>
-        <ContactUsTemplate/>
-        <FooterTemplate/>
-    </>
-  );
+    const ourServicesSection = useRef(null)
+
+    return (
+        <>
+            <MainPageTemplate refs={ourServicesSection}/>
+            <AboutUs/>
+            <OurServicesTemplate refs={ourServicesSection}/>
+            <PricingPlanTemplate/>
+            <MembershipTemplate/>
+            <BlogTemplate/>
+            <ContactUsTemplate/>
+            <FooterTemplate/>
+        </>
+    );
 }
 
 export default App;
