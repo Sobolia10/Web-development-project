@@ -9,22 +9,35 @@ import BlogTemplate from "./Templates/BlogTemplate";
 import ContactUsTemplate from "./Templates/ContactUsTemplate";
 import FooterTemplate from "./Templates/FooterTemplate";
 import {useRef} from "react";
+import {useSelector} from "react-redux";
+import {useNavigate} from "react-router-dom";
+import AuthPage from "./Pages/AuthPage";
 
 function App() {
+    const navigate = useNavigate();
     const ourServicesSection = useRef(null)
 
+    debugger
+    let isAuth = useSelector(state => state.authReducer.isAuth);
+
+    if (!isAuth) {
+        navigate('/auth');
+    }
+    
     return (
-        <>
-            <MainPageTemplate refs={ourServicesSection}/>
-            <AboutUs/>
-            <OurServicesTemplate refs={ourServicesSection}/>
-            <PricingPlanTemplate/>
-            <MembershipTemplate/>
-            <BlogTemplate/>
-            <ContactUsTemplate/>
-            <FooterTemplate/>
-        </>
-    );
+        isAuth ?
+            <>
+                <MainPageTemplate refs={ourServicesSection}/>
+                <AboutUs/>
+                <OurServicesTemplate refs={ourServicesSection}/>
+                <PricingPlanTemplate/>
+                <MembershipTemplate/>
+                <BlogTemplate/>
+                <ContactUsTemplate/>
+                <FooterTemplate/>
+            </> : <AuthPage/>
+    )
+        ;
 }
 
 export default App;
