@@ -4,7 +4,6 @@ import './style.css';
 
 const MainPageTemplate = ({refs}) => {
     const toNavigate = () => {
-        debugger
         refs.current.scrollIntoView();
     }
 

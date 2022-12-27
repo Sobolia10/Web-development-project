@@ -17,27 +17,24 @@ function App() {
     const navigate = useNavigate();
     const ourServicesSection = useRef(null)
 
-    debugger
+
     let isAuth = useSelector(state => state.authReducer.isAuth);
 
     if (!isAuth) {
         navigate('/auth');
     }
-    
-    return (
-        isAuth ?
-            <>
-                <MainPageTemplate refs={ourServicesSection}/>
-                <AboutUs/>
-                <OurServicesTemplate refs={ourServicesSection}/>
-                <PricingPlanTemplate/>
-                <MembershipTemplate/>
-                <BlogTemplate/>
-                <ContactUsTemplate/>
-                <FooterTemplate/>
-            </> : <AuthPage/>
-    )
-        ;
+
+    return (isAuth ?
+        <>
+            <MainPageTemplate refs={ourServicesSection}/>
+            <AboutUs/>
+            <OurServicesTemplate refs={ourServicesSection}/>
+            <PricingPlanTemplate/>
+            <MembershipTemplate/>
+            <BlogTemplate/>
+            <ContactUsTemplate/>
+            <FooterTemplate/>
+        </> : <AuthPage/>);
 }
 
 export default App;
