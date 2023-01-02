@@ -2,6 +2,11 @@ import TitleComponent from "../../Components/TitleComponent";
 import ButtonComponent from "../../Components/ButtonComponent";
 
 const ContactUsTemplate = () => {
+
+
+    const onContactUsClick = () => {
+        //some action;
+    };
     return (
         <div>
             <TitleComponent title={'Contact Us'} description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor \n' +
@@ -29,7 +34,7 @@ const ContactUsTemplate = () => {
             <input type="text" placeholder={'your email'}/>
             <input type="text" placeholder={'your phone'}/>
             <textarea name="" id="" cols="30" rows="10" placeholder={'write message'}></textarea>
-            <ButtonComponent onClick={()=>(console.log)}/>
+            <ButtonComponent onClick={()=>onContactUsClick}/>
         </div>
     )
 }

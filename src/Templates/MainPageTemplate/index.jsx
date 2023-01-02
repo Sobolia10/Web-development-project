@@ -7,6 +7,9 @@ const MainPageTemplate = ({refs}) => {
         refs.current.scrollIntoView();
     }
 
+    const onClickHire = () => {
+        //some action
+    }
     return (
         <>
             <HeaderComponent/>
@@ -14,7 +17,7 @@ const MainPageTemplate = ({refs}) => {
                 <h1>Web development project</h1>
                 <p>Very suitable to support all web development projects</p>
                 <ButtonComponent title={'our services'} onClick={() => toNavigate}/>
-                <ButtonComponent title={'hire is now'} onClick={() => console.log()}/>
+                <ButtonComponent title={'hire is now'} onClick={() => onClickHire}/>
             </div>
         </>
     )

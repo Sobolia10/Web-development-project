@@ -13,8 +13,6 @@ const AuthPage = () => {
     const reduxPassword = useSelector(state => state.authReducer.password);
     const reduxUsername = useSelector(state => state.authReducer.username);
 
-
-
     let authAction = () => {
         if (username === reduxUsername && password === reduxPassword) {
             dispatch(authActionCreator())

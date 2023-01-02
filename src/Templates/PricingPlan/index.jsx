@@ -6,6 +6,11 @@ import TitleComponent from "../../Components/TitleComponent";
 import './style.css';
 
 const PricingPlanTemplate = () => {
+
+    const onClickOrderNow = () => {
+        //
+    }
+
     return (
         <div className={'pricing-section'}>
             <div className={'title-desc'}>
@@ -26,7 +31,7 @@ const PricingPlanTemplate = () => {
                             <ListGroup.Item>5 Free Projects</ListGroup.Item>
                             <ListGroup.Item>PHP 5 Enabled</ListGroup.Item>
                             <ListGroup.Item>24/7 Suports</ListGroup.Item>
-                            <ButtonComponent title={'order now'} onClick={()=>(console.log())}/>
+                            <ButtonComponent title={'order now'} onClick={()=>onClickOrderNow}/>
                         </ListGroup>
                     </Card>
                 ))

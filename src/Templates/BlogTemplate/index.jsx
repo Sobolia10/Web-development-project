@@ -7,6 +7,9 @@ import ButtonComponent from "../../Components/ButtonComponent";
 const BlogTemplate = () => {
     let isLeft = false;
 
+    const onClickMoreView = () => {
+        //some action;
+    };
     return (
         <div>
             <TitleComponent title={'Blog'}
@@ -17,7 +20,7 @@ const BlogTemplate = () => {
                     <BlogComponent title={title} key={id} publishDate={publishDate} img={img} description={description}
                                    isLeft={isLeft}/>
             ))}
-            <ButtonComponent title={'More view'} onClick={() => (console.log)}/>
+            <ButtonComponent title={'More view'} onClick={() => onClickMoreView}/>
         </div>
     )
 }
