@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {useState} from "react";
 import {authActionCreator} from "../../redux";
 
-const AuthPage = ({isAuth}) => {
+const AuthPage = ({setUser}) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [incorrectPassword, setIncorrectPassword] = useState(false)
@@ -16,11 +16,11 @@ const AuthPage = ({isAuth}) => {
     let authAction = () => {
         if (username === reduxUsername && password === reduxPassword) {
             dispatch(authActionCreator())
-            isAuth(username)
+            setUser(username)
             navigate('/');
         } else {
             setIncorrectPassword(true);
-            isAuth(null)
+            setUser(null)
         }
     }
 

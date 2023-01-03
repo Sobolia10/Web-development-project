@@ -1,4 +1,4 @@
-import {Route, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import HeaderComponent from "./Components/HeaderComponent";
 import {useState} from "react";
 import FooterTemplate from "./Templates/FooterTemplate";
@@ -11,10 +11,10 @@ function App() {
     const [user, setUser] = useState(null);
 
     return (
-        <>
+        <BrowserRouter>
             <HeaderComponent/>
             <Routes>
-                <Route path={'auth'} element={<AuthPage isAuth={setUser}/>}/>
+                <Route path={'auth'} element={<AuthPage setUser={setUser}/>}/>
                 <Route path={'/'} element={<ProtectedRoute user={user}/>}>
 
                     <Route path={'/'} element={<Landing/>}/>
@@ -27,11 +27,11 @@ function App() {
                     <Route path={'/blog'} element={<Landing/>}/>
                     <Route path={'/contactUs'} element={<Landing/>}/>
                 </Route>
-                <Route path="*" element={<ErrorPage/>} />
+                <Route path="*" element={<ErrorPage/>}/>
 
             </Routes>
             <FooterTemplate/>
-        </>
+        </BrowserRouter>
     )
 }
 
