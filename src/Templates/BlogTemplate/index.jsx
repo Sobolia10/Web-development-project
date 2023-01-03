@@ -11,7 +11,7 @@ const BlogTemplate = () => {
         //some action;
     };
     return (
-        <div>
+        <div id={'blog'}>
             <TitleComponent title={'Blog'}
                             description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor \n' +
                                 'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'}/>

@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useRef, useState} from "react";
 import BannerTemplate from "./BannerTemplate";
 import {Spinner} from "react-bootstrap";
 import TitleComponent from "../../Components/TitleComponent";
@@ -9,13 +9,13 @@ const OurServicesTemplate = ({refs}) => {
     const [isLoading, setLoading] = useState(false);
     const [users, setUsers] = useState([]);
     const [filteredUsers, setFilteredUsers] = useState([]);
-    // const [show, setShow] = useState(false);
+     const [show, setShow] = useState(false);
 
 
-    /*    const ourServicesSection = useRef(null)
+        const ourServicesSection = useRef(null)
 
         const handleClose = () => setShow(false);
-        const handleShow = () => setShow(true);*/
+        const handleShow = () => setShow(true);
 
     const showUsersAsync = async () => {
         setLoading(true)
@@ -50,7 +50,7 @@ const OurServicesTemplate = ({refs}) => {
 
     return (
 
-        <div className={'ourServices-section'} id={'ourServices'} ref={refs}>
+        <div className={'ourServices-section'} id={'servicing'} ref={refs}>
             <div className={'title-desc'}>
                 <TitleComponent title={'Our Services'}
                                 description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor \n' +

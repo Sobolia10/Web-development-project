@@ -1,82 +1,39 @@
-import './App.css';
-import {useRef, useState} from "react";
-import AboutUs from "./Templates/AboutUs";
-import OurServicesTemplate from "./Templates/OurServices";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import PricingPlanTemplate from "./Templates/PricingPlan";
-import MainPageTemplate from "./Templates/MainPageTemplate";
-import MembershipTemplate from "./Templates/MembershipTemplate";
-import BlogTemplate from "./Templates/BlogTemplate";
-import ContactUsTemplate from "./Templates/ContactUsTemplate";
+import {Route, Routes} from "react-router-dom";
+import HeaderComponent from "./Components/HeaderComponent";
+import {useState} from "react";
 import FooterTemplate from "./Templates/FooterTemplate";
 import AuthPage from "./Pages/AuthPage";
-import {useSelector} from "react-redux";
-import {useNavigate} from "react-router-dom";
-import {wait} from "@testing-library/user-event/dist/utils";
-import {Spinner} from "react-bootstrap";
-
-
-const useMakeQuery = (initialUrl, initialData) => {
-    const [data, setData] = useState(initialData);
-    const [url, setUrl] = useState(initialUrl);
-    const [isLoading, setIsLoading] = useState(false);
-    const [isLoaded, setIsLoaded] = useState(false);
-
-
-    const fetchData = async () => {
-        setIsLoading(true);
-
-        try {
-            setIsLoaded(true)
-            const response = await fetch(url);
-            await wait(1000)
-            const data = await response.json();
-            setData(data);
-
-        } catch (error) {
-            //Ignore
-        }
-        setIsLoading(false);
-    };
-
-    if (!isLoaded)
-        fetchData();
-
-    return [{data, isLoading, isLoaded}, setUrl];
-}
-
+import ErrorPage from "./Pages/ErrorPage";
+import {Landing} from "./Components/Landing";
+import {ProtectedRoute} from "./Components/ProtectedRoute";
 
 function App() {
-    const [{isLoading, isLoaded}, doFetch] = useMakeQuery(
-        'https://jsonplaceholder.typicode.com/users', []);
-
-    const navigate = useNavigate();
-    const ourServicesSection = useRef(null)
-    let isAuth = useSelector(state => state.authReducer.isAuth);
-
-    if (!isLoaded)
-        doFetch('https://jsonplaceholder.typicode.com/users');
-
-    if (!isAuth) {
-        navigate('/auth');
-    }
+    const [user, setUser] = useState(null);
 
     return (
         <>
-            {isLoading && <Spinner/>}
-            {isAuth ? <>
-                <MainPageTemplate refs={ourServicesSection}/>
-                <AboutUs/>
-                <OurServicesTemplate refs={ourServicesSection}/>
-                <PricingPlanTemplate/>
-                <MembershipTemplate/>
-                <BlogTemplate/>
-                <ContactUsTemplate/>
-                <FooterTemplate/>
-            </> : <AuthPage/>}
-        </>
+            <HeaderComponent/>
+            <Routes>
+                <Route path={'auth'} element={<AuthPage isAuth={setUser}/>}/>
+                <Route path={'/'} element={<ProtectedRoute user={user}/>}>
 
+                    <Route path={'/'} element={<Landing/>}/>
+                    {/*Для примера*/}
+                    <Route path={'/home'} element={<Landing/>}/>
+                    <Route path={'/about'} element={<Landing/>}/>
+                    <Route path={'/servicing'} element={<Landing/>}/>
+                    <Route path={'/pricing'} element={<Landing/>}/>
+                    <Route path={'/team'} element={<Landing/>}/>
+                    <Route path={'/blog'} element={<Landing/>}/>
+                    <Route path={'/contactUs'} element={<Landing/>}/>
+                </Route>
+                <Route path="*" element={<ErrorPage/>} />
+
+            </Routes>
+            <FooterTemplate/>
+        </>
     )
 }
+
 
 export default App;

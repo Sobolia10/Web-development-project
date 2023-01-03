@@ -9,9 +9,11 @@ const NavBarComponent = () => {
     const dispatch = useDispatch();
     const isAuth = useSelector(state => state.authReducer.isAuth);
 
-    let LogOut = () => {
+    const LogOut = () => {
         dispatch(unauthActionCreator())
     }
+
+
 
     return (
         <>
@@ -19,7 +21,8 @@ const NavBarComponent = () => {
                 <ul className="nav__list">
                     {NAV_BAR_DATA.map(({id, label, path}) => (
                         <li key={id} className="nav__link">
-                            <Link to={path}>{label}</Link>
+                            {/*<Link to={path} onClick={NavigateTo}>{label}</Link>*/}
+                            <a href={path}>{label}</a>
                         </li>
                     ))}
                     {isAuth ?

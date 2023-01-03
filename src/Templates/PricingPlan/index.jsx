@@ -12,7 +12,7 @@ const PricingPlanTemplate = () => {
     }
 
     return (
-        <div className={'pricing-section'}>
+        <div className={'pricing-section'} id={'pricing'}>
             <div className={'title-desc'}>
                 <TitleComponent title={'Pricing Plan'} description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor \n' +
                     'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'}/>

@@ -4,8 +4,6 @@ import {MEMBERS_DATA} from "./constants";
 import './style.css';
 
 const MembershipTemplate = () => {
-
-
     return (
         <>
             <TitleComponent title={'Our Team Member'}
