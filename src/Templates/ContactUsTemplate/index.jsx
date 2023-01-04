@@ -13,7 +13,7 @@ const ContactUsTemplate = () => {
                 'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'} />
             <ul>
                 <li>
-                    <img src="adrees.svg" alt="phone"/>
+                    <img src="addresss.svg" alt="phone"/>
                     <p>Nobinagar savar,Dhaka
                         Bangladesh</p>
                 </li>

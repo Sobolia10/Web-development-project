@@ -5,7 +5,7 @@ import TitleComponent from "../../Components/TitleComponent";
 
 const AboutUs = () => {
     return (
-        <div className="aboutUsArticle">
+        <div className="aboutUsArticle" id={'about'}>
             <div>
                 <TitleComponent
                     title={'About us'}

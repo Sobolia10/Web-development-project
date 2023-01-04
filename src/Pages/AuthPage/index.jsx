@@ -3,6 +3,7 @@ import ButtonComponent from "../../Components/ButtonComponent";
 import {useDispatch, useSelector} from 'react-redux';
 import {useState} from "react";
 import {authActionCreator} from "../../redux";
+import './style.css';
 
 const AuthPage = ({setUser}) => {
     const [username, setUsername] = useState('');
@@ -14,6 +15,7 @@ const AuthPage = ({setUser}) => {
     const reduxUsername = useSelector(state => state.authReducer.username);
 
     let authAction = () => {
+        debugger
         if (username === reduxUsername && password === reduxPassword) {
             dispatch(authActionCreator())
             setUser(username)
@@ -39,14 +41,18 @@ const AuthPage = ({setUser}) => {
     }
 
     return (
-        <div>
-            <h2>Auth page</h2>
+        <div className={'form-auth'}>
+            <h2 className={'form-title'}>Auth page</h2>
+            <label>Login
             <input type={'text'} id={'login'} name={'login'} onChange={handleChange}/>
+            </label>
+            <label>Password
             <input type={'password'} id={'password'} name={'password'} onChange={handleChange}/>
+            </label>
             <ButtonComponent title={'Login'} onClick={() => authAction}/>
             {incorrectPassword ? <span>Неправильный пароль</span> : null}
         </div>
     )
 }
 
-export default AuthPage
+export default AuthPage;

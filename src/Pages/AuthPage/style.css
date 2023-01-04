@@ -1,5 +1,21 @@
 .form-auth {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-title {
+    display: flex;
     justify-content: center;
+    position: relative;
+}
+
+#login {
+    margin-left: 50px;
+}
+
+#password {
+    margin-left: 21px;
+    margin-bottom: 50px;
 }

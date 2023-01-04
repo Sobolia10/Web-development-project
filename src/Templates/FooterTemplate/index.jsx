@@ -1,8 +1,9 @@
 import NavBarComponent from "../../Components/NavBarComponent";
+import './style.css';
 
 const FooterTemplate = () => {
     return (
-        <footer>
+        <footer className={'footer'}>
             <NavBarComponent/>
             <div>
                 <p>All right reserved © 2017</p>

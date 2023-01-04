@@ -14,8 +14,9 @@ const PricingPlanTemplate = () => {
     return (
         <div className={'pricing-section'} id={'pricing'}>
             <div className={'title-desc'}>
-                <TitleComponent title={'Pricing Plan'} description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor \n' +
-                    'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'}/>
+                <TitleComponent title={'Pricing Plan'}
+                                description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor \n' +
+                                    'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'}/>
             </div>
             <div className={'priceCard-box'}>
                 {PRICING_DATA.map(el => (
@@ -31,13 +32,11 @@ const PricingPlanTemplate = () => {
                             <ListGroup.Item>5 Free Projects</ListGroup.Item>
                             <ListGroup.Item>PHP 5 Enabled</ListGroup.Item>
                             <ListGroup.Item>24/7 Suports</ListGroup.Item>
-                            <ButtonComponent title={'order now'} onClick={()=>onClickOrderNow}/>
+                            <ButtonComponent title={'order now'} onClick={() => onClickOrderNow}/>
                         </ListGroup>
                     </Card>
                 ))
                 }
-
-
             </div>
         </div>
     )

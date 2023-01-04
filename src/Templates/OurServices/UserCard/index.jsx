@@ -5,7 +5,7 @@ import UserCard from "../../../Components/UserCard";
 import './style.css';
 
 
-const BannerTemplate = ({user}) => {
+const UserTemplate = ({user}) => {
     const [show, setShow] = useState(false);
 
     const handleShowUser = () => {
@@ -35,4 +35,4 @@ const BannerTemplate = ({user}) => {
     );
 }
 
-export default BannerTemplate;
+export default UserTemplate;

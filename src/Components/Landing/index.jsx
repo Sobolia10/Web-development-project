@@ -17,8 +17,8 @@ export const Landing = () => {
             <OurServicesTemplate refs={ourServicesSection}/>
             <PricingPlanTemplate/>
             <MembershipTemplate/>
-            <BlogTemplate/>
-            <ContactUsTemplate/>
+            {/*<BlogTemplate/>*/}
+            {/*<ContactUsTemplate/>*/}
         </>
     )
 }

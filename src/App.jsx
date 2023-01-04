@@ -6,6 +6,7 @@ import AuthPage from "./Pages/AuthPage";
 import ErrorPage from "./Pages/ErrorPage";
 import {Landing} from "./Components/Landing";
 import {ProtectedRoute} from "./Components/ProtectedRoute";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
     const [user, setUser] = useState(null);
@@ -18,7 +19,7 @@ function App() {
                 <Route path={'/'} element={<ProtectedRoute user={user}/>}>
 
                     <Route path={'/'} element={<Landing/>}/>
-                    {/*Для примера*/}
+
                     <Route path={'/home'} element={<Landing/>}/>
                     <Route path={'/about'} element={<Landing/>}/>
                     <Route path={'/servicing'} element={<Landing/>}/>

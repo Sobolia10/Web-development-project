@@ -5,7 +5,7 @@ import './style.css';
 
 const MembershipTemplate = () => {
     return (
-        <>
+        <div id={'team'}>
             <TitleComponent title={'Our Team Member'}
                             description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor \n' +
                                 'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'}/>
@@ -16,7 +16,7 @@ const MembershipTemplate = () => {
             ))}
             </div>
 
-        </>
+        </div>
     )
 }
 
